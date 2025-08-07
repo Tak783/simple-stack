@@ -37,6 +37,20 @@
 			);
 			target = 8BA6C22E2E4531D6005B468A /* StackUsers */;
 		};
+		8BA6C2C52E45353D005B468A /* Exceptions for "StackUsersUITests" folder in "StackUsersTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				StackUsersTests/StackUsersTests.swift,
+			);
+			target = 8BA6C2442E4531D9005B468A /* StackUsersTests */;
+		};
+		8BA6C2C62E45353D005B468A /* Exceptions for "StackUsersUITests" folder in "StackUsersUITests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				StackUsersTests/StackUsersTests.swift,
+			);
+			target = 8BA6C24E2E4531D9005B468A /* StackUsersUITests */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -48,13 +62,12 @@
 			path = StackUsers;
 			sourceTree = "<group>";
 		};
-		8BA6C2482E4531D9005B468A /* StackUsersTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = StackUsersTests;
-			sourceTree = "<group>";
-		};
 		8BA6C2522E4531D9005B468A /* StackUsersUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				8BA6C2C52E45353D005B468A /* Exceptions for "StackUsersUITests" folder in "StackUsersTests" target */,
+				8BA6C2C62E45353D005B468A /* Exceptions for "StackUsersUITests" folder in "StackUsersUITests" target */,
+			);
 			path = StackUsersUITests;
 			sourceTree = "<group>";
 		};
@@ -89,7 +102,6 @@
 			isa = PBXGroup;
 			children = (
 				8BA6C2312E4531D6005B468A /* StackUsers */,
-				8BA6C2482E4531D9005B468A /* StackUsersTests */,
 				8BA6C2522E4531D9005B468A /* StackUsersUITests */,
 				8BA6C2302E4531D6005B468A /* Products */,
 			);
@@ -142,9 +154,6 @@
 			);
 			dependencies = (
 				8BA6C2472E4531D9005B468A /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				8BA6C2482E4531D9005B468A /* StackUsersTests */,
 			);
 			name = StackUsersTests;
 			packageProductDependencies = (
@@ -289,6 +298,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D9SX45YF8X;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = StackUsers/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -316,6 +326,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D9SX45YF8X;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = StackUsers/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
