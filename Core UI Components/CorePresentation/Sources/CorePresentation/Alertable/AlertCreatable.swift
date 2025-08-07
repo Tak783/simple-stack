@@ -8,6 +8,7 @@
 
 import UIKit
 
+@MainActor
 public protocol AlertCreatable {
     func alertController(
         title: String?, message: String?,

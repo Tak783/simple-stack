@@ -12,5 +12,7 @@ import Foundation
 public protocol HTTPClient {
     typealias Result = Swift.Result<(Data, HTTPURLResponse), Error>
 
-    func performRequest(_ request: URLRequest, completion: @escaping (Result) -> Void)
+    func performRequest(_ request: URLRequest, completion: @escaping @Sendable (Result) -> Void)
 }
+
+extension HTTPURLResponse: @unchecked Sendable {}

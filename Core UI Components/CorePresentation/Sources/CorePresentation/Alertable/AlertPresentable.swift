@@ -8,6 +8,7 @@
 
 import UIKit
 
+@MainActor
 public protocol AlertPresentable: AlertCreatable {
     var router: Router { get }
     
@@ -59,10 +60,7 @@ extension AlertPresentable {
             message: message,
             style: style,
             actions: actions
-        )
-        let _ = router.navigationController.viewControllers.last?.updateHUD(
-            toShow: false
-        )
+        )       
         router.navigateToViewController(
             alertController,
             withMethod: .present,

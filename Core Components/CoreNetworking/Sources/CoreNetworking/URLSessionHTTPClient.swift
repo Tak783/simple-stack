@@ -7,7 +7,7 @@
 
 import Foundation
 
-public final class URLSessionHTTPClient: HTTPClient {
+public struct URLSessionHTTPClient: HTTPClient, @unchecked Sendable {
     private let session: URLSession
 
     public init(session: URLSession = .shared) {
@@ -16,7 +16,11 @@ public final class URLSessionHTTPClient: HTTPClient {
 
     private struct UnexpectedValuesRepresentation: Error {}
 
-    public func performRequest(_ request: URLRequest, completion: @escaping (HTTPClient.Result) -> Void) {
+    public func performRequest(
+        _ request: URLRequest,
+        // ⬇️ matches protocol
+        completion: @escaping @Sendable (HTTPClient.Result) -> Void
+    ) {
         session.dataTask(with: request) { data, response, error in
             completion(Result {
                 if let error = error {

@@ -9,7 +9,7 @@ import Foundation
 import XCTest
 
 public extension XCTestCase {
-    func waitForMainThread() {
+    @MainActor func waitForMainThread() {
         let exp = expectation(description: "wait for main thread")
         DispatchQueue.main.async {
             exp.fulfill()

@@ -21,7 +21,7 @@
       location = "group:Presentation"
       name = "Presentation">
       <FileRef
-         location = "group:StackUsers.xcodeproj">
+         location = "group:StackExchangeUsers/StackExchangeUsers.xcodeproj">
       </FileRef>
       <Group
          location = "group:StackUsers"

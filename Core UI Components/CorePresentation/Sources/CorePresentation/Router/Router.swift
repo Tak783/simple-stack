@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+@MainActor
 public final class Router: Routerable {
     public enum NavigationMethod {
         case push, present, setAsRoot

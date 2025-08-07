@@ -33,9 +33,6 @@ let package = Package(
             dependencies: [
                 "CoreFoundational",
                 "CoreNetworking"
-            ],
-            resources: [
-                .process("Resources")
             ]
         )
     ]

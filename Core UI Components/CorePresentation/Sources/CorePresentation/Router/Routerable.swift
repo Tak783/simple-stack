@@ -8,6 +8,7 @@
 
 import UIKit
 
+@MainActor
 public protocol Routerable: AnyObject {
     var navigationController: UINavigationController { get }
 

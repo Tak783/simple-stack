@@ -11,11 +11,21 @@ let package = Package(
             name: "CorePresentation",
             targets: ["CorePresentation"]),
     ],
+    dependencies: [
+        .package(
+            name: "CoreFoundational",
+            path: "../Core/CoreFoundational"
+        )
+    ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "CorePresentation"),
+            name: "CorePresentation",
+            dependencies: [
+                "CoreFoundational"
+            ]
+        ),
         .testTarget(
             name: "CorePresentationTests",
             dependencies: ["CorePresentation"]

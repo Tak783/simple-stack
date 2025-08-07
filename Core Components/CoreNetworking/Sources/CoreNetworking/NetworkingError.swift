@@ -8,4 +8,5 @@
 public enum NetworkingError: Swift.Error {
     case invalidResponse
     case invalidData
+    case missingAPIKey
 }
