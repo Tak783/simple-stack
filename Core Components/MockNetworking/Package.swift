@@ -6,19 +6,37 @@ import PackageDescription
 let package = Package(
     name: "MockNetworking",
     products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
             name: "MockNetworking",
-            targets: ["MockNetworking"]),
+            targets: [
+                "MockNetworking"
+            ]
+        ),
+    ],
+    dependencies: [
+        .package(
+            name: "CoreFoundational",
+            path: "../Core/CoreFoundational"
+        ),
+        .package(
+            name: "CoreTesting",
+            path: "../CoreTesting"
+        ),
+        .package(
+            name: "CoreNetworking",
+            path: "../CoreComponents/Sources/CoreNetworking"
+        ),
     ],
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "MockNetworking"),
-        .testTarget(
-            name: "MockNetworkingTests",
-            dependencies: ["MockNetworking"]
-        ),
+            name: "MockNetworking",
+            dependencies: [
+                "CoreFoundational",
+                "CoreNetworking"
+            ],
+            resources: [
+                .process("Resources")
+            ]
+        )
     ]
 )

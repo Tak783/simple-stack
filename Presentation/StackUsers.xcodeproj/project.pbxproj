@@ -6,6 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		8BA6C2EA2E453742005B468A /* CoreFoundational in Frameworks */ = {isa = PBXBuildFile; productRef = 8BA6C2E92E453742005B468A /* CoreFoundational */; };
+		8BA6C2EC2E453742005B468A /* CoreNetworking in Frameworks */ = {isa = PBXBuildFile; productRef = 8BA6C2EB2E453742005B468A /* CoreNetworking */; };
+		8BA6C2EE2E453742005B468A /* CorePresentation in Frameworks */ = {isa = PBXBuildFile; productRef = 8BA6C2ED2E453742005B468A /* CorePresentation */; };
+		8BA6C2F02E453742005B468A /* MockNetworking in Frameworks */ = {isa = PBXBuildFile; productRef = 8BA6C2EF2E453742005B468A /* MockNetworking */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		8BA6C2462E4531D9005B468A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -78,6 +85,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BA6C2F02E453742005B468A /* MockNetworking in Frameworks */,
+				8BA6C2EA2E453742005B468A /* CoreFoundational in Frameworks */,
+				8BA6C2EC2E453742005B468A /* CoreNetworking in Frameworks */,
+				8BA6C2EE2E453742005B468A /* CorePresentation in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +114,7 @@
 			children = (
 				8BA6C2312E4531D6005B468A /* StackUsers */,
 				8BA6C2522E4531D9005B468A /* StackUsersUITests */,
+				8BA6C2E82E453742005B468A /* Frameworks */,
 				8BA6C2302E4531D6005B468A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -115,6 +127,13 @@
 				8BA6C24F2E4531D9005B468A /* StackUsersUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		8BA6C2E82E453742005B468A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +156,10 @@
 			);
 			name = StackUsers;
 			packageProductDependencies = (
+				8BA6C2E92E453742005B468A /* CoreFoundational */,
+				8BA6C2EB2E453742005B468A /* CoreNetworking */,
+				8BA6C2ED2E453742005B468A /* CorePresentation */,
+				8BA6C2EF2E453742005B468A /* MockNetworking */,
 			);
 			productName = StackUsers;
 			productReference = 8BA6C22F2E4531D6005B468A /* StackUsers.app */;
@@ -574,6 +597,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8BA6C2E92E453742005B468A /* CoreFoundational */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CoreFoundational;
+		};
+		8BA6C2EB2E453742005B468A /* CoreNetworking */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CoreNetworking;
+		};
+		8BA6C2ED2E453742005B468A /* CorePresentation */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CorePresentation;
+		};
+		8BA6C2EF2E453742005B468A /* MockNetworking */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MockNetworking;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8BA6C2272E4531D6005B468A /* Project object */;
 }

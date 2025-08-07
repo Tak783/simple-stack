@@ -2,12 +2,12 @@
 <Workspace
    version = "1.0">
    <FileSystemSynchronizedGroup
-      location = "group:Core Components"
-      name = "Core Components">
-   </FileSystemSynchronizedGroup>
-   <FileSystemSynchronizedGroup
       location = "group:Core Foundational"
       name = "Core Foundational">
+   </FileSystemSynchronizedGroup>
+   <FileSystemSynchronizedGroup
+      location = "group:Core Components"
+      name = "Core Components">
    </FileSystemSynchronizedGroup>
    <FileSystemSynchronizedGroup
       location = "group:Core UI Components"
