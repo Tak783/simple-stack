@@ -11,6 +11,7 @@
 		8BA6C2EC2E453742005B468A /* CoreNetworking in Frameworks */ = {isa = PBXBuildFile; productRef = 8BA6C2EB2E453742005B468A /* CoreNetworking */; };
 		8BA6C2EE2E453742005B468A /* CorePresentation in Frameworks */ = {isa = PBXBuildFile; productRef = 8BA6C2ED2E453742005B468A /* CorePresentation */; };
 		8BA6C2F02E453742005B468A /* MockNetworking in Frameworks */ = {isa = PBXBuildFile; productRef = 8BA6C2EF2E453742005B468A /* MockNetworking */; };
+		8BA6C3112E453F9A005B468A /* CoreStackExchange in Frameworks */ = {isa = PBXBuildFile; productRef = 8BA6C3102E453F9A005B468A /* CoreStackExchange */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		8BA6C2572E4531D9005B468A /* Exceptions for "StackUsers" folder in "StackUsers" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				Feature/Resources/JSON/MalformedJSON.json,
 				Info.plist,
 			);
 			target = 8BA6C22E2E4531D6005B468A /* StackUsers */;
@@ -60,11 +62,22 @@
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		8BA6C31B2E4540B1005B468A /* Exceptions for "StackUsers" folder in "Compile Sources" phase from "StackUsers" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			buildPhase = 8BA6C22B2E4531D6005B468A /* Sources */;
+			membershipExceptions = (
+				Feature/Resources/JSON/MalformedJSON.json,
+			);
+		};
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		8BA6C2312E4531D6005B468A /* StackUsers */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				8BA6C2572E4531D9005B468A /* Exceptions for "StackUsers" folder in "StackUsers" target */,
+				8BA6C31B2E4540B1005B468A /* Exceptions for "StackUsers" folder in "Compile Sources" phase from "StackUsers" target */,
 			);
 			path = StackUsers;
 			sourceTree = "<group>";
@@ -85,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BA6C3112E453F9A005B468A /* CoreStackExchange in Frameworks */,
 				8BA6C2F02E453742005B468A /* MockNetworking in Frameworks */,
 				8BA6C2EA2E453742005B468A /* CoreFoundational in Frameworks */,
 				8BA6C2EC2E453742005B468A /* CoreNetworking in Frameworks */,
@@ -160,6 +174,7 @@
 				8BA6C2EB2E453742005B468A /* CoreNetworking */,
 				8BA6C2ED2E453742005B468A /* CorePresentation */,
 				8BA6C2EF2E453742005B468A /* MockNetworking */,
+				8BA6C3102E453F9A005B468A /* CoreStackExchange */,
 			);
 			productName = StackUsers;
 			productReference = 8BA6C22F2E4531D6005B468A /* StackUsers.app */;
@@ -614,6 +629,10 @@
 		8BA6C2EF2E453742005B468A /* MockNetworking */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = MockNetworking;
+		};
+		8BA6C3102E453F9A005B468A /* CoreStackExchange */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CoreStackExchange;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

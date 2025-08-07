@@ -1,0 +1,21 @@
+{
+    "items": [
+        {
+            "badge_counts": {
+                "bronze": 1382,
+                "silver": 1427,
+                "gold": 165
+            },
+            "user_id": 106224,
+            "accept_rate": 96,
+            "lo
+            "website_url": "https://NOVALISTIC.com",
+            "link": "https://stackoverflow.com/users/106224/boltclock",
+            "profile_image": "https://www.gravatar.com/avatar/a2d818d801ce38a33807f68fdd92043a?s=256&d=identicon&r=PG",
+            "display_name": "BoltClock"
+        }
+    ],
+    "has_more": true,
+    "quota_max": 10000,
+    "quota_remaining": 9995
+}

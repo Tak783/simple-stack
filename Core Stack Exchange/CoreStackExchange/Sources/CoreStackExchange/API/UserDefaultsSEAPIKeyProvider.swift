@@ -8,10 +8,10 @@
 import Foundation
 
 /// User Defaults only used for speed, API Call should happen on the backend for security, speed and re-usability purposes
-struct UserDefaultsSEAPIKeyProvider: SEAPIKeyProviding {
+public struct UserDefaultsSEAPIKeyProvider: SEAPIKeyProviding {
     private static let apiKeyKey = "stackExchangeAPIKey"
     
-    static func stackExchangeAPIKey() -> String? {
+    public static func stackExchangeAPIKey() -> String? {
         UserDefaults.standard.string(forKey: apiKeyKey)
     }
 }
