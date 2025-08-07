@@ -1,0 +1,39 @@
+//
+//  URLPool.swift
+//  StackUsers
+//
+//  Created by Tak Mazarura on 07/08/2025.
+//
+
+import Foundation
+import CoreFoundational
+import CoreNetworking
+
+// MARK: - URL Components
+extension URLPool {
+    private static let scheme = "https"
+    private static let host = "api.stackexchange.com"
+    private static let path = "/2.2"
+    
+    private enum EndPoints: String {
+        case users = "/users"
+    }
+}
+
+// MARK: - SEUserAPIURLPoolable
+extension URLPool: SEUserAPIURLPoolable {
+    static func usersRequest() -> URLRequest {
+        let endPoint = path + EndPoints.users.rawValue
+        let queryItems = [
+            URLQueryItem(name: "site", value: "stackoverflow"),
+            URLQueryItem(name: "key", value: APIKeyProvider.getStackExchangeKey() ?? "")
+        ]
+        let url = configureURL(
+            scheme: scheme,
+            host: host,
+            path: endPoint,
+            queryItems: queryItems
+        )
+        return .init(method: .get, url: url)
+    }
+}
