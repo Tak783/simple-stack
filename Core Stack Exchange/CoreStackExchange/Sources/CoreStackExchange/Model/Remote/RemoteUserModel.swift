@@ -7,10 +7,10 @@
 
 import Foundation
 
-struct RemoteUserModel: Codable {
-    let profileImage: URL
-    let displayName: String
-    let reputation: Int
+public struct RemoteUserModel: Codable {
+    public let profileImage: URL
+    public let displayName: String
+    public let reputation: Int
 
     private enum CodingKeys: String, CodingKey {
         case profileImage = "profile_image"

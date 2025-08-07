@@ -7,13 +7,13 @@
 
 import Foundation
 
-struct UserModel {
-    let profileImage: URL
-    let displayName: String
-    let reputation: Int
-    var isFollowed: Bool = false
+public struct UserModel {
+    public let profileImage: URL
+    public let displayName: String
+    public let reputation: Int
+    public var isFollowed: Bool = false
 
-    init(from remote: RemoteUserModel, isFollowed: Bool = false) {
+    public init(from remote: RemoteUserModel, isFollowed: Bool = false) {
         self.profileImage = remote.profileImage
         self.displayName = remote.displayName
         self.reputation = remote.reputation
