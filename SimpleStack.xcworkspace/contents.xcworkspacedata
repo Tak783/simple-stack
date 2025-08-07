@@ -9,6 +9,10 @@
       location = "group:Core Foundational"
       name = "Core Foundational">
    </FileSystemSynchronizedGroup>
+   <FileSystemSynchronizedGroup
+      location = "group:Core UI Components"
+      name = "Core UI Components">
+   </FileSystemSynchronizedGroup>
    <Group
       location = "group:Presentation"
       name = "Presentation">
