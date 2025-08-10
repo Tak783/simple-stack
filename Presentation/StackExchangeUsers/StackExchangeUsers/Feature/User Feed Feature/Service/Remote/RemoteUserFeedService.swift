@@ -25,7 +25,7 @@ struct RemoteUserFeedService: UserFeedServiceable {
         client.performRequest(request) { result in
             switch result {
             case let .success((data, response)):
-                self.handleLoadUsersSuccessResponse(data: data, response: response, completion: completion)
+                handleLoadUsersSuccessResponse(data: data, response: response, completion: completion)
             case .failure(let error):
                 completion(.failure(error))
             }

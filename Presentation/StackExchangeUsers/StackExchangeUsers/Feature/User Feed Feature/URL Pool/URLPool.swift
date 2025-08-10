@@ -9,7 +9,6 @@ import Foundation
 import CoreFoundational
 import CoreNetworking
 
-// MARK: - URL Components
 extension URLPool {
     private static let scheme = "https"
     private static let host = "api.stackexchange.com"

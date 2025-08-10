@@ -11,17 +11,15 @@ import MockNetworking
 import CoreStackExchange
 @testable import StackExchangeUsers
 
-// MARK: - Spec
-protocol RemoteUserFeedServiceSpec {
-    func test_load_onSuccess_returnsUsers()
-    func test_load_onSuccessWithNon200Code_returnsError()
-    func test_load_onSuccessWithInvalidData_returnsError()
-    func test_load_onFailure_returnsError()
+final class RemoteUserFeedServiceTests: RemoteUserFeedServiceTest {
+    override func setUp() {
+        UserDefaultsSEAPIKeyProvider.setStackExchangeAPIKey(UUID().uuidString)
+    }
+    
+    override func tearDown() {
+        UserDefaultsSEAPIKeyProvider.deleteStackExchangeAPIKey()
+    }
 }
-
-typealias RemoteUserFeedServiceTest = XCTestCase & RemoteUserFeedServiceSpec
-
-final class RemoteUserFeedServiceTests: RemoteUserFeedServiceTest {}
 
 // MARK: - Load Feed Failure Tests
 extension RemoteUserFeedServiceTests {

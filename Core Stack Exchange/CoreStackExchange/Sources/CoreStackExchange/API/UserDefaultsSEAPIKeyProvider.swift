@@ -14,4 +14,12 @@ public struct UserDefaultsSEAPIKeyProvider: SEAPIKeyProviding {
     public static func stackExchangeAPIKey() -> String? {
         UserDefaults.standard.string(forKey: apiKeyKey)
     }
+    
+    public static func setStackExchangeAPIKey(_ key: String) {
+        UserDefaults.standard.set(key, forKey: apiKeyKey)
+    }
+    
+    public static func deleteStackExchangeAPIKey() {
+        UserDefaults.standard.set(nil, forKey: apiKeyKey)
+    }
 }
