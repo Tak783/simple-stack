@@ -8,7 +8,7 @@
 import CoreStackExchange
 import CoreFoundational
 
-struct UserFeedViewModel: UserFeedViewModellable {
+final class UserFeedViewModel: UserFeedViewModellable {
     var onLoadingStateChange: Observer<Bool>?
     var onFeedLoadError: Observer<String?>?
     var onFeedLoadSuccess: Observer<[UserModel]>?
@@ -24,16 +24,17 @@ struct UserFeedViewModel: UserFeedViewModellable {
 
     func loadFeed() {
         onLoadingStateChange?(true)
-        userFeedService.load { result in
+        userFeedService.load { [weak self] result in
+            guard let self = self else { return }
             switch result {
             case let .success(users):
-                onFeedLoadSuccess?(users)
-                onFeedLoadError?(nil)
-                onFeedLoadEmptyState?(users.isEmpty)
+                self.onFeedLoadSuccess?(users)
+                self.onFeedLoadError?(nil)
+                self.onFeedLoadEmptyState?(users.isEmpty)
             case .failure:
-                onFeedLoadError?("Failed to load user feed")
+                self.onFeedLoadError?("Failed to load user feed")
             }
-            onLoadingStateChange?(false)
+            self.onLoadingStateChange?(false)
         }
     }
 }

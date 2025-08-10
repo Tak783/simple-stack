@@ -3,4 +3,116 @@
    uuid = "7D8BE3AC-5E2A-4E5E-B7D3-2922CDBA3CBC"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B4078B7B-360C-4C86-BF5E-ABEB88A92A11"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Presentation/StackExchangeUsers/StackExchangeUsers/Feature/User Feed Feature/View Model/UserFeedViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "loadFeed()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C4B7680D-E0B3-4717-B3CF-82E48BE564D8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Presentation/StackExchangeUsers/StackExchangeUsers/Feature/User Feed Feature/View Model/UserFeedViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "loadFeed()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "769E7E93-5CEB-43EA-AA7F-5829B0C05644"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Presentation/StackExchangeUsers/StackExchangeUsers/Feature/User Feed Feature/View Model/UserFeedViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "loadFeed()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6EDB1C71-1EFE-4FB4-B694-455327BFAF44"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Presentation/StackExchangeUsers/StackExchangeUsersTests/Feature/View Model/UserFeedViewModelUnitTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "test_loadFeed_setsLoadStateToTrue()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4A0D60AB-A712-44BE-BC2F-1EF583262F7D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Presentation/StackExchangeUsers/StackExchangeUsers/Feature/User Feed Feature/View Model/UserFeedViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "loadFeed()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "4A0D60AB-A712-44BE-BC2F-1EF583262F7D - d54ddbfc95cb9e05"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "StackExchangeUsers.UserFeedViewModel.loadFeed() -&gt; ()"
+                  moduleName = "StackExchangeUsers.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/takomborerwa/Repos/Challenges/SuperSimpleStack/Presentation/StackExchangeUsers/StackExchangeUsers/Feature/User%20Feed%20Feature/View%20Model/UserFeedViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27">
+               </Location>
+               <Location
+                  uuid = "4A0D60AB-A712-44BE-BC2F-1EF583262F7D - fb3bbfd6e39932bb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Array&lt;CoreStackExchange.UserModel&gt;, Swift.Error&gt;) -&gt; () in StackExchangeUsers.UserFeedViewModel.loadFeed() -&gt; ()"
+                  moduleName = "StackExchangeUsers.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/takomborerwa/Repos/Challenges/SuperSimpleStack/Presentation/StackExchangeUsers/StackExchangeUsers/Feature/User%20Feed%20Feature/View%20Model/UserFeedViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
