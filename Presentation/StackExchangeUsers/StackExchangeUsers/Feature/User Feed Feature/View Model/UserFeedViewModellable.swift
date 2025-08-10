@@ -9,14 +9,15 @@ import CoreStackExchange
 import CoreFoundational
 
 protocol UserFeedViewModellable {
-    var title: String { get set }
+    var title: String { get }
+    var users: [UserModel] { get }
+    
+    var userFeedService: UserFeedServiceable { get }
     
     var onLoadingStateChange: Observer<Bool>? { get set }
     var onFeedLoadError: Observer<String?>? { get set }
-    var onFeedLoadSuccess: Observer<[UserModel]>? { get set }
+    var onFeedLoadSuccess: Observer<Void>? { get set }
     var onFeedLoadEmptyState: Observer<Bool>? { get set }
-    
-    var userFeedService: UserFeedServiceable { get set }
 
     func loadFeed()
 }

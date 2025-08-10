@@ -10,6 +10,8 @@ import Foundation
 import CoreFoundational
 import UIKit
 
+public typealias StoryboardedViewController = UIViewController & Storyboarded
+
 extension Storyboarded where Self: UIViewController {
     private static var storyboardName: String {
         className.deletingSuffix("ViewController")

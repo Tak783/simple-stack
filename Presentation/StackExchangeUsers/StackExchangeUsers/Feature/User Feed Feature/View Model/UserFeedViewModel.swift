@@ -11,15 +11,17 @@ import CoreFoundational
 final class UserFeedViewModel: UserFeedViewModellable {
     var onLoadingStateChange: Observer<Bool>?
     var onFeedLoadError: Observer<String?>?
-    var onFeedLoadSuccess: Observer<[UserModel]>?
+    var onFeedLoadSuccess: Observer<Void>?
     var onFeedLoadEmptyState: Observer<Bool>?
 
-    var userFeedService: UserFeedServiceable
-    var title: String
-
+    private(set) var title: String
+    private(set) var users: [UserModel]
+    private(set) var userFeedService: UserFeedServiceable
+    
     init(userFeedService: UserFeedServiceable, title: String) {
         self.title = title
         self.userFeedService = userFeedService
+        self.users = .init()
     }
 
     func loadFeed() {
@@ -28,7 +30,8 @@ final class UserFeedViewModel: UserFeedViewModellable {
             guard let self = self else { return }
             switch result {
             case let .success(users):
-                self.onFeedLoadSuccess?(users)
+                self.users = users
+                self.onFeedLoadSuccess?(())
                 self.onFeedLoadError?(nil)
                 self.onFeedLoadEmptyState?(users.isEmpty)
             case .failure:

@@ -16,7 +16,7 @@ struct RemoteUserFeedService: UserFeedServiceable {
         self.client = client
     }
 
-    func load(apiKey: String, completion: @escaping (UserFeedLoadResult) -> Void) {
+    func load(completion: @escaping (UserFeedLoadResult) -> Void) {
         guard let apiKey = UserDefaultsSEAPIKeyProvider.stackExchangeAPIKey() else {
             completion(.failure(NetworkingError.missingAPIKey))
             return
