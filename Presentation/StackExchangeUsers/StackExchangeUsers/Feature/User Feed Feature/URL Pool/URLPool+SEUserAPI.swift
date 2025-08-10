@@ -36,3 +36,4 @@ extension URLPool: SEUserAPIURLPoolable {
         return .init(method: .get, url: url)
     }
 }
+

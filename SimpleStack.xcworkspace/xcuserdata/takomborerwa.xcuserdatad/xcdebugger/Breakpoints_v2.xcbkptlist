@@ -82,36 +82,6 @@
             endingLineNumber = "27"
             landmarkName = "loadFeed()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "4A0D60AB-A712-44BE-BC2F-1EF583262F7D - d54ddbfc95cb9e05"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "StackExchangeUsers.UserFeedViewModel.loadFeed() -&gt; ()"
-                  moduleName = "StackExchangeUsers.debug.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/takomborerwa/Repos/Challenges/SuperSimpleStack/Presentation/StackExchangeUsers/StackExchangeUsers/Feature/User%20Feed%20Feature/View%20Model/UserFeedViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "27"
-                  endingLineNumber = "27">
-               </Location>
-               <Location
-                  uuid = "4A0D60AB-A712-44BE-BC2F-1EF583262F7D - fb3bbfd6e39932bb"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;Swift.Array&lt;CoreStackExchange.UserModel&gt;, Swift.Error&gt;) -&gt; () in StackExchangeUsers.UserFeedViewModel.loadFeed() -&gt; ()"
-                  moduleName = "StackExchangeUsers.debug.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/takomborerwa/Repos/Challenges/SuperSimpleStack/Presentation/StackExchangeUsers/StackExchangeUsers/Feature/User%20Feed%20Feature/View%20Model/UserFeedViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "27"
-                  endingLineNumber = "27">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
