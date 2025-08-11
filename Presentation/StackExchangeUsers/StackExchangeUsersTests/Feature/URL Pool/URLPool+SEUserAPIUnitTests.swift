@@ -11,6 +11,12 @@ import CoreNetworking
 import CoreTesting
 @testable import StackExchangeUsers
 
+import XCTest
+import CoreFoundational
+import CoreNetworking
+import CoreTesting
+@testable import StackExchangeUsers
+
 final class SEUsersURLPoolTests: XCTestCase {
     let expectedScheme = "https"
     let expectedHost = "api.stackexchange.com"
@@ -21,9 +27,9 @@ final class SEUsersURLPoolTests: XCTestCase {
 extension SEUsersURLPoolTests {
     func test_usersRequest_configuresUsersRequestCorrectly() {
         let endpoint = "/users"
-        let expectedPathSuffix = expectedBasePath + endpoint + "?site=stackoverflow&key=test_key"
+        let expectedPathSuffix = expectedBasePath + endpoint + "?site=stackoverflow&pagesize=20&key=test_key"
         let expectedUrlAbsoluteString = fullURL(withPathSuffix: expectedPathSuffix)
-        let request = URLPool.usersRequest(apiKey: "test_key")
+        let request = URLPool.usersRequest(apiKey: "test_key", pagesize: 20)
 
         assert(request: request, urlAbsoluteString: expectedUrlAbsoluteString, httpMethod: .get)
     }

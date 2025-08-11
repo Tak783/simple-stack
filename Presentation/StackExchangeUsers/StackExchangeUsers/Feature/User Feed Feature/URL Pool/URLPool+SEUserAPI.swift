@@ -21,10 +21,11 @@ extension URLPool {
 
 // MARK: - SEUserAPIURLPoolable
 extension URLPool: SEUserAPIURLPoolable {
-    static func usersRequest(apiKey: String) -> URLRequest {
+    static func usersRequest(apiKey: String, pagesize: Int = 20) -> URLRequest {
         let endPoint = path + EndPoints.users.rawValue
         let queryItems = [
             URLQueryItem(name: "site", value: "stackoverflow"),
+            URLQueryItem(name: "pagesize", value: String(pagesize)),
             URLQueryItem(name: "key", value: apiKey)
         ]
         let url = configureURL(
@@ -36,4 +37,3 @@ extension URLPool: SEUserAPIURLPoolable {
         return .init(method: .get, url: url)
     }
 }
-

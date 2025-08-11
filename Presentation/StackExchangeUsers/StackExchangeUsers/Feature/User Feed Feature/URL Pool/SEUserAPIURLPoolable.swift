@@ -8,5 +8,5 @@
 import Foundation
 
 protocol SEUserAPIURLPoolable {
-    static func usersRequest(apiKey: String) -> URLRequest
+    static func usersRequest(apiKey: String, pagesize: Int) -> URLRequest
 }
