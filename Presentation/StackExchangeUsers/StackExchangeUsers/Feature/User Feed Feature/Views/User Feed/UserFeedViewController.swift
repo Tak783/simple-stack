@@ -12,10 +12,9 @@ import CorePresentation
 final class UserFeedViewController: StoryboardedViewController {
     @IBOutlet private var errorView: UIView!
     @IBOutlet private var errorViewTitleLabel: UILabel!
-    @IBOutlet private var stockFeedEmptyMessageLabel: UILabel!
     @IBOutlet private var tableView: UITableView! {
         didSet {
-            tableView.accessibilityIdentifier = "stocks-feed-table"
+            tableView.accessibilityIdentifier = "user-feed-table"
         }
     }
     
@@ -45,8 +44,8 @@ extension UserFeedViewController {
     private func makeAccessible() {
         tableView.makeViewAccessible(
             isAccessibilityElement: true,
-            accessibilityLabel: "Stock Feed",
-            accessibilityHint: "Shows a feed of stocks"
+            accessibilityLabel: "Users Feed",
+            accessibilityHint: "Shows a feed of users"
         )
     }
     
@@ -115,7 +114,7 @@ extension UserFeedViewController {
     
     private func showEmptyFeedState(_ isEmpty: Bool) {
         showErrorView(
-            withErrorMessage: isEmpty ? "Stock feed returned was empty\n Pull to refresh feed" : .none,
+            withErrorMessage: isEmpty ? "User feed returned was empty\n Pull to refresh feed" : .none,
             backgroundColor: .systemBlue
         )
     }
@@ -169,14 +168,19 @@ extension UserFeedViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        feedViewModel?.users.count ?? .zero
+        feedViewModel?.userModels.count ?? .zero
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let viewModel = feedViewModel?.users[indexPath.row] as? UserTableViewCell else {
-            assertionFailure("ViewModel should adhere to `StocksFeedItemTableViewControllable`")
+        guard let userModel = feedViewModel?.userModels[indexPath.row]  else {
+            assertionFailure("ViewModel should adhere to `UsersFeedItemTableViewControllable`")
             return .init()
         }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: UserTableViewCell.className) as? UserTableViewCell else {
+            assertionFailure("Could not dequeue `StocksFeedTableViewCell` from TableView")
+            return .init()
+        }
+        cell.update(withModel: userModel)
         return .init()
     }
 }

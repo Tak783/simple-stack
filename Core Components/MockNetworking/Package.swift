@@ -5,6 +5,9 @@ import PackageDescription
 
 let package = Package(
     name: "MockNetworking",
+    platforms: [
+        .iOS(.v17)
+    ],
     products: [
         .library(
             name: "MockNetworking",

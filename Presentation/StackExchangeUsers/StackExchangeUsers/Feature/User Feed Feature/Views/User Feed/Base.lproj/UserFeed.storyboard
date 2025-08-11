@@ -1,24 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PSK-tn-7pe">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Users-->
+        <scene sceneID="yZW-n0-Qj7">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController storyboardIdentifier="UserFeedViewController" id="PSK-tn-7pe" customClass="UserFeedViewController" customModule="StackExchangeUsers" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sCt-hh-7vT">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="J7J-Eq-pEB">
+                                <rect key="frame" x="0.0" y="103" width="393" height="0.0"/>
+                                <subviews>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IiR-sE-mLN" userLabel="Error View">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="24"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unable to Load Feed. Pull to refresh to try again." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z60-9h-GT7">
+                                                <rect key="frame" x="8" y="12" width="398" height="0.0"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="error-view"/>
+                                        <constraints>
+                                            <constraint firstItem="Z60-9h-GT7" firstAttribute="top" secondItem="IiR-sE-mLN" secondAttribute="top" constant="12" id="9eh-Tf-SAB"/>
+                                            <constraint firstItem="Z60-9h-GT7" firstAttribute="leading" secondItem="IiR-sE-mLN" secondAttribute="leadingMargin" id="Fzd-dL-zEk"/>
+                                            <constraint firstAttribute="bottom" secondItem="Z60-9h-GT7" secondAttribute="bottom" constant="12" id="Re1-TE-OMa"/>
+                                            <constraint firstItem="Z60-9h-GT7" firstAttribute="trailing" secondItem="IiR-sE-mLN" secondAttribute="trailingMargin" id="spg-bu-R4n"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XUm-hN-v4z">
+                                <rect key="frame" x="0.0" y="103" width="393" height="749"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="GkR-OO-sRU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <accessibility key="accessibilityConfiguration" identifier="stocks-feed-view">
+                            <bool key="isElement" value="NO"/>
+                        </accessibility>
+                        <constraints>
+                            <constraint firstItem="XUm-hN-v4z" firstAttribute="leading" secondItem="sCt-hh-7vT" secondAttribute="leading" id="4uj-V5-NOv"/>
+                            <constraint firstItem="XUm-hN-v4z" firstAttribute="top" secondItem="J7J-Eq-pEB" secondAttribute="bottom" id="G8n-LI-wOv"/>
+                            <constraint firstItem="J7J-Eq-pEB" firstAttribute="leading" secondItem="GkR-OO-sRU" secondAttribute="leading" id="QQY-eA-vQ7"/>
+                            <constraint firstItem="J7J-Eq-pEB" firstAttribute="top" secondItem="GkR-OO-sRU" secondAttribute="top" id="Tm7-Xp-JZD"/>
+                            <constraint firstAttribute="bottom" secondItem="XUm-hN-v4z" secondAttribute="bottom" id="egd-v1-hJv"/>
+                            <constraint firstItem="XUm-hN-v4z" firstAttribute="trailing" secondItem="GkR-OO-sRU" secondAttribute="trailing" id="kdx-EH-HPp"/>
+                            <constraint firstItem="GkR-OO-sRU" firstAttribute="trailing" secondItem="J7J-Eq-pEB" secondAttribute="trailing" id="t6s-yo-Tdk"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Users" largeTitleDisplayMode="always" id="RxM-M7-m4C"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="errorView" destination="IiR-sE-mLN" id="TX6-4T-Ao2"/>
+                        <outlet property="errorViewTitleLabel" destination="Z60-9h-GT7" id="JGY-K3-Whz"/>
+                        <outlet property="tableView" destination="XUm-hN-v4z" id="2Ud-pX-buy"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NOr-G8-dRQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1800.0000000000002" y="109.82142857142857"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

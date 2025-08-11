@@ -22,3 +22,6 @@ public struct UserModel: Equatable, Identifiable {
         self.isFollowed = isFollowed
     }
 }
+
+// MARK: - UserModellabe
+extension UserModel: UserModellabe {}

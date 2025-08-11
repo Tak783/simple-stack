@@ -10,7 +10,7 @@ import CoreFoundational
 
 protocol UserFeedViewModellable {
     var title: String { get }
-    var users: [UserModel] { get }
+    var userModels: [UserModel] { get }
     
     var userFeedService: UserFeedServiceable { get }
     
