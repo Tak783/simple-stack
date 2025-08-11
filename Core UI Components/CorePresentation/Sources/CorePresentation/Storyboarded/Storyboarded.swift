@@ -8,6 +8,7 @@
 
 import Foundation
 
+@MainActor
 public protocol Storyboarded {
     static func instantiate(fromBundle bundle: Bundle) -> Self
 }
