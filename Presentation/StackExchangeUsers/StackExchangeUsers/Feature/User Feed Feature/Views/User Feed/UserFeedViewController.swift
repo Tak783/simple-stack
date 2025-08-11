@@ -180,14 +180,18 @@ extension UserFeedViewController: UITableViewDataSource {
             assertionFailure("Could not dequeue `StocksFeedTableViewCell` from TableView")
             return .init()
         }
+        cell.delegate = self
         cell.update(withModel: userModel)
         return .init()
     }
 }
 
 // MARK: - UITableViewDelegate
-extension UserFeedViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        .init()
+extension UserFeedViewController: UITableViewDelegate {}
+
+// MARK: - UITableViewDelegate
+extension UserFeedViewController: UserTableViewCellDelegate {
+    func didTapToUpdateFollowStatusFor(userWithId userID: Int) {
+        feedViewModel?.didRequestToUpdateFollowStatusFor(userWithId: userID)
     }
 }

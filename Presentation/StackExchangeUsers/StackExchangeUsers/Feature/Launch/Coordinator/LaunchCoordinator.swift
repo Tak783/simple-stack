@@ -26,9 +26,15 @@ final class LaunchCoordinator {
 extension LaunchCoordinator: LaunchCoordinatorable {
     func navigateToUserFeed() {
         let client = URLSessionHTTPClient()
-        let service = RemoteUserFeedService(client: client)
-        let viewModel = UserFeedViewModel(userFeedService: service, title: "Users")
+        let feedService = RemoteUserFeedService(client: client)
+        let userFollowingService = UserDefaultsFollowUserService()
+        let feedViewModel = UserFeedViewModel(
+            userFeedService: feedService,
+            userFollowingService: userFollowingService,
+            title: "Users"
+        )
         let viewController = UserFeedViewController.instantiate()
+        viewController.feedViewModel = feedViewModel
         
         router.navigateToViewController(
             viewController,

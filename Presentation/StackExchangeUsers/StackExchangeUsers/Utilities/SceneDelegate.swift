@@ -17,12 +17,22 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         willConnectTo session: UISceneSession,
         options connectionOptions: UIScene.ConnectionOptions
     ) {
-        launchCoordinator = appLaunchCoordinator()
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+        
+        let window = UIWindow(windowScene: windowScene)
+        
+        let router = Router(navigationController: UINavigationController())
+        launchCoordinator = Self.appLaunchCoordinator()
+        
+        // Set root view controller
+        window.rootViewController = router.navigationController
+        self.window = window
+        window.makeKeyAndVisible()
     }
 }
 
 extension SceneDelegate {
-    private func appLaunchCoordinator() -> LaunchCoordinator {
+    private static func appLaunchCoordinator() -> LaunchCoordinator {
         let router = Router(navigationController: .init())
         let launchCoordinator = LaunchCoordinator(
             router: router

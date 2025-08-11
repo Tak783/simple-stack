@@ -66,6 +66,9 @@
                         </constraints>
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="filled" title="Follow"/>
+                        <connections>
+                            <action selector="didTouchUpInsideFollowButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="mn4-8H-ObU"/>
+                        </connections>
                     </button>
                 </subviews>
                 <constraints>
@@ -79,6 +82,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="followButton" destination="gvL-T4-gXU" id="Lac-yj-yxG"/>
                 <outlet property="nameLabel" destination="7s8-5l-3xX" id="nSb-4O-yJ5"/>
                 <outlet property="profileImageView" destination="KPM-hq-jJ5" id="Lr0-6O-kYz"/>
                 <outlet property="reputationLabel" destination="OkB-tm-7w7" id="h3b-J5-bEP"/>
