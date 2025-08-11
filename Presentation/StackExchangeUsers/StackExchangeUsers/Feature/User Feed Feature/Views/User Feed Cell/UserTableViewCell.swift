@@ -30,7 +30,7 @@ final class UserTableViewCell: UITableViewCell {
     }
 }
 
-// MARK: - StockFeedItemViewable
+// MARK: - Set up view
 extension UserTableViewCell {
     private func setupViewForDefaultState() {
         imageTask?.cancel()
@@ -48,7 +48,7 @@ extension UserTableViewCell {
     }
 }
 
-// MARK: - StockFeedItemViewable
+// MARK: - UserTableViewCellUpdateable
 extension UserTableViewCell: UserTableViewCellUpdateable {
     func update(withModel model: any UserModellabe) {
         userID = model.id

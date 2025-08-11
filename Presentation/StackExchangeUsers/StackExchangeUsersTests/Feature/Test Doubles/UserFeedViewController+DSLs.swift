@@ -14,7 +14,7 @@ import CoreStackExchange
 // MARK: - Domain Specific Language Var's
 extension UserFeedViewController {
     var table: UITableView? {
-        view.findChildView(byAccessibilityIdentifier: "stocks-feed-table") as? UITableView
+        view.findChildView(byAccessibilityIdentifier: "users-feed-table") as? UITableView
     }
     
     var loadingIndicator: UIRefreshControl? {

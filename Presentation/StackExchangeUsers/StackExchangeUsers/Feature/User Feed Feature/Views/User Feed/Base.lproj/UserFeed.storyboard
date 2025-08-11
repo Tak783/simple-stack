@@ -47,7 +47,7 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="GkR-OO-sRU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <accessibility key="accessibilityConfiguration" identifier="stocks-feed-view">
+                        <accessibility key="accessibilityConfiguration" identifier="users-feed-table">
                             <bool key="isElement" value="NO"/>
                         </accessibility>
                         <constraints>
