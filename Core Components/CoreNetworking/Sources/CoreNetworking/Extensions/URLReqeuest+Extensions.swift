@@ -2,7 +2,7 @@
 //  URLRequest+Extensions.swift
 //  CoreNetworking
 //
-//  Created by Tak Mazarura on 06/06/2021.
+//  Created by TM.DEV on 06/06/2021.
 //
 
 import Foundation

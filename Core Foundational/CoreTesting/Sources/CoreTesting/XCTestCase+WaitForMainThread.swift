@@ -2,7 +2,7 @@
 //  XCTestCase+WaitForMainThread.swift
 //  CoreTesting
 //
-//  Created by Tak Mazarura on 04/05/2021.
+//  Created by TM.DEV on 04/05/2021.
 //
 
 import Foundation

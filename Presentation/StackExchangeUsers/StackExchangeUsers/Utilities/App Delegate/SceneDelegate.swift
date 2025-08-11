@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  StackUsers
 //
-//  Created by Tak Mazarura on 07/08/2025.
+//  Created by TM.DEV on 07/08/2025.
 //
 
 import UIKit
@@ -22,7 +22,7 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let window = UIWindow(windowScene: windowScene)
         
-        UserDefaultsSEAPIKeyProvider.setStackExchangeAPIKey("rl_558dm4vJewGq8NJ5E4fi9Dyze")
+        UserDefaultsSEAPIKeyProvider.setStackExchangeAPIKey("{add-your-key}")
         
         let router = Router(navigationController: UINavigationController())
         launchCoordinator = LaunchCoordinator(router: router)

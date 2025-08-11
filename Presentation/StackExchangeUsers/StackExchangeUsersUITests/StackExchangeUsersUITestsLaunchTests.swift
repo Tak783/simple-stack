@@ -2,13 +2,12 @@
 //  StackExchangeUsersUITestsLaunchTests.swift
 //  StackExchangeUsersUITests
 //
-//  Created by Tak Mazarura on 07/08/2025.
+//  Created by TM.DEV on 07/08/2025.
 //
 
 import XCTest
 
 final class StackExchangeUsersUITestsLaunchTests: XCTestCase {
-
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
     }

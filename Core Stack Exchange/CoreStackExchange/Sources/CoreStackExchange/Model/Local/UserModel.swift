@@ -2,7 +2,7 @@
 //  UserModel.swift
 //  StackUsers
 //
-//  Created by Tak Mazarura on 07/08/2025.
+//  Created by TM.DEV on 07/08/2025.
 //
 
 import Foundation

@@ -2,7 +2,7 @@
 //  NetworkingError.swift
 //  CoreNetworking
 //
-//  Created by Tak Mazarura on 07/08/2025.
+//  Created by TM.DEV on 07/08/2025.
 //
 
 public enum NetworkingError: Swift.Error {

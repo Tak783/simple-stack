@@ -2,7 +2,7 @@
 //  UserModellabe.swift
 //  CoreStackExchange
 //
-//  Created by Tak Mazarura on 11/08/2025.
+//  Created by TM.DEV on 11/08/2025.
 //
 
 import Foundation

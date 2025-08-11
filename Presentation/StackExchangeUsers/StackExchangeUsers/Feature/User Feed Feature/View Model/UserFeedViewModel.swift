@@ -2,7 +2,7 @@
 //  UserFeedViewModel.swift
 //  StackExchangeUsers
 //
-//  Created by Tak Mazarura on 10/08/2025.
+//  Created by TM.DEV on 10/08/2025.
 //
 
 import CoreStackExchange
