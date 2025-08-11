@@ -13,11 +13,13 @@ import CoreStackExchange
 
 final class RemoteUserFeedServiceTests: RemoteUserFeedServiceTest {
     override func setUp() {
+        super.setUp()
         UserDefaultsSEAPIKeyProvider.setStackExchangeAPIKey(UUID().uuidString)
     }
     
     override func tearDown() {
-        UserDefaultsSEAPIKeyProvider.deleteStackExchangeAPIKey()
+        super.tearDown()
+        TestsUserDefaultsManager.clearUserDefaults()
     }
 }
 

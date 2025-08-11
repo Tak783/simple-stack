@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B08D9C62E4A499200CD30E3 /* CoreFoundational in Frameworks */ = {isa = PBXBuildFile; productRef = 8B08D9C52E4A499200CD30E3 /* CoreFoundational */; };
+		8B08D9C82E4A499200CD30E3 /* CorePresentation in Frameworks */ = {isa = PBXBuildFile; productRef = 8B08D9C72E4A499200CD30E3 /* CorePresentation */; };
+		8B08D9CA2E4A499200CD30E3 /* CoreStackExchange in Frameworks */ = {isa = PBXBuildFile; productRef = 8B08D9C92E4A499200CD30E3 /* CoreStackExchange */; };
 		8BA6C3E72E454970005B468A /* CoreFoundational in Frameworks */ = {isa = PBXBuildFile; productRef = 8BA6C3E62E454970005B468A /* CoreFoundational */; };
 		8BA6C3E92E454970005B468A /* CoreNetworking in Frameworks */ = {isa = PBXBuildFile; productRef = 8BA6C3E82E454970005B468A /* CoreNetworking */; };
 		8BA6C3EB2E454970005B468A /* CorePresentation in Frameworks */ = {isa = PBXBuildFile; productRef = 8BA6C3EA2E454970005B468A /* CorePresentation */; };
@@ -116,7 +119,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B08D9C82E4A499200CD30E3 /* CorePresentation in Frameworks */,
 				8BA6C3F12E45497E005B468A /* MockNetworking in Frameworks */,
+				8B08D9C62E4A499200CD30E3 /* CoreFoundational in Frameworks */,
+				8B08D9CA2E4A499200CD30E3 /* CoreStackExchange in Frameworks */,
 				8BA6C3EF2E45497E005B468A /* CoreTesting in Frameworks */,
 				8BA6C3F52E454A09005B468A /* CoreNetworking in Frameworks */,
 			);
@@ -211,6 +217,9 @@
 				8BA6C3EE2E45497E005B468A /* CoreTesting */,
 				8BA6C3F02E45497E005B468A /* MockNetworking */,
 				8BA6C3F42E454A09005B468A /* CoreNetworking */,
+				8B08D9C52E4A499200CD30E3 /* CoreFoundational */,
+				8B08D9C72E4A499200CD30E3 /* CorePresentation */,
+				8B08D9C92E4A499200CD30E3 /* CoreStackExchange */,
 			);
 			productName = StackExchangeUsersTests;
 			productReference = 8BA6C3922E454907005B468A /* StackExchangeUsersTests.xctest */;
@@ -632,6 +641,18 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		8B08D9C52E4A499200CD30E3 /* CoreFoundational */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CoreFoundational;
+		};
+		8B08D9C72E4A499200CD30E3 /* CorePresentation */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CorePresentation;
+		};
+		8B08D9C92E4A499200CD30E3 /* CoreStackExchange */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CoreStackExchange;
+		};
 		8BA6C3E62E454970005B468A /* CoreFoundational */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = CoreFoundational;

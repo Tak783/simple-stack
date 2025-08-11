@@ -15,11 +15,13 @@ import CoreStackExchange
 
 final class UserFeedViewModelUnitTests: XCTestCase  {
     override func setUp() {
+        super.setUp()
         UserDefaultsSEAPIKeyProvider.setStackExchangeAPIKey(UUID().uuidString)
     }
     
     override func tearDown() {
-        UserDefaultsSEAPIKeyProvider.deleteStackExchangeAPIKey()
+        super.tearDown()
+        TestsUserDefaultsManager.clearUserDefaults()
     }
 }
 
@@ -31,7 +33,6 @@ extension UserFeedViewModelUnitTests {
         let (sut, _) = make_sut(userFeedService: remoteUserFeedService, title: title)
 
         XCTAssertEqual(sut.title, title)
-        XCTAssertNotNil(sut.userFeedService as? RemoteUserFeedService)
     }
 
     func test_loadFeed_setsLoadStateToTrue() {
@@ -95,7 +96,12 @@ extension UserFeedViewModelUnitTests {
         userFeedService: RemoteUserFeedService,
         title: String = "Feed"
     ) -> (sut: UserFeedViewModel, spy: UserFeedSpy) {
-        let sut = UserFeedViewModel(userFeedService: userFeedService, title: title)
+        let userFollowingService = UserDefaultsFollowUserService()
+        let sut = UserFeedViewModel(
+            userFeedService: userFeedService,
+            userFollowingService: userFollowingService,
+            title: title
+        )
         let spy = UserFeedSpy(viewModel: sut)
         return (sut, spy)
     }
@@ -123,8 +129,8 @@ extension UserFeedViewModelUnitTests {
             viewModel.onFeedLoadError = { [weak self] error in
                 self?.error = error
             }
-            viewModel.onFeedLoadSuccess = { [weak self] users in
-                self?.users = users
+            viewModel.onFeedLoadSuccess = { [weak self] _ in
+                self?.users = self?.viewModel.userModels
             }
         }
     }
