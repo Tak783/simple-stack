@@ -12,6 +12,4 @@ public protocol FollowUserServiceable {
     
     func isFollowed(_ userID: Int) -> Bool
     func setFollowed(_ isFollowed: Bool, for userID: Int)
-    
-    @discardableResult func toggleFollow(_ userID: Int) -> Bool
 }

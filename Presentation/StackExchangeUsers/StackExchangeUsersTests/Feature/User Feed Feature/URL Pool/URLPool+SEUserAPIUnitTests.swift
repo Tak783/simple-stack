@@ -11,12 +11,6 @@ import CoreNetworking
 import CoreTesting
 @testable import StackExchangeUsers
 
-import XCTest
-import CoreFoundational
-import CoreNetworking
-import CoreTesting
-@testable import StackExchangeUsers
-
 final class SEUsersURLPoolTests: XCTestCase {
     let expectedScheme = "https"
     let expectedHost = "api.stackexchange.com"

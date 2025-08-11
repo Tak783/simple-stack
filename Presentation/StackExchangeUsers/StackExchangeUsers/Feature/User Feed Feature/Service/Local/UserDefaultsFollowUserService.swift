@@ -38,17 +38,6 @@ extension UserDefaultsFollowUserService: FollowUserServiceable {
         }
         saveUserDefaults()
     }
-    
-    @discardableResult
-    func toggleFollow(_ userID: Int) -> Bool {
-        if cache.contains(userID) {
-            cache.remove(userID)
-        } else {
-            cache.insert(userID)
-        }
-        saveUserDefaults()
-        return cache.contains(userID)
-    }
 }
 
 extension UserDefaultsFollowUserService {

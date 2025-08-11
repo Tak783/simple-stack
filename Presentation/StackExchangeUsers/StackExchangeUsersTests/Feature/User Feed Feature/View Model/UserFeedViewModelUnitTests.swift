@@ -13,7 +13,7 @@ import MockNetworking
 import CoreStackExchange
 @testable import StackExchangeUsers
 
-final class UserFeedViewModelUnitTests: XCTestCase  {
+final class UserFeedViewModelUnitTests: UserFeedViewModelUnitTest {
     override func setUp() {
         super.setUp()
         UserDefaultsSEAPIKeyProvider.setStackExchangeAPIKey(UUID().uuidString)
@@ -25,6 +25,7 @@ final class UserFeedViewModelUnitTests: XCTestCase  {
     }
 }
 
+// MARK: - UserFeedViewModelUnitTestSpec
 extension UserFeedViewModelUnitTests {
     func test_init_setsInitialVariablesCorrectly() {
         let title = "Users"
