@@ -10,12 +10,12 @@
       name = "Core Components">
    </FileSystemSynchronizedGroup>
    <FileSystemSynchronizedGroup
-      location = "group:Core UI Components"
-      name = "Core UI Components">
-   </FileSystemSynchronizedGroup>
-   <FileSystemSynchronizedGroup
       location = "group:Core Stack Exchange"
       name = "Core Stack Exchange">
+   </FileSystemSynchronizedGroup>
+   <FileSystemSynchronizedGroup
+      location = "group:Core UI Components"
+      name = "Core UI Components">
    </FileSystemSynchronizedGroup>
    <Group
       location = "group:Presentation"
