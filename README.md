@@ -5,8 +5,9 @@
 * Built with SwiftUI & UIKit using MVVM+C in an modular architecture using platfom agnostic components
 
 ## Priority notices: 
-This is one way architect the project. Others are possible. The approach depends on the company and team needs.
-The approach is *not* indicative of hard preferences or style: it’s just one approach. Many others are possible and viable. 
+* There are many ways to build an iOS app, this way. Others are possible. 
+* Deciding an approach depends on the company and team needs. This one was chosen for reasons discussed in the Architecture section.
+* This approach chosen iss *not* indicative of hard preference or style: it’s just one approach. Many others are possible and viable. 
 
 FAQ: Architecture and use of Swift Packages: 
 * “could it be simpler and all live in one Xcode project without packages? ”: Yes
