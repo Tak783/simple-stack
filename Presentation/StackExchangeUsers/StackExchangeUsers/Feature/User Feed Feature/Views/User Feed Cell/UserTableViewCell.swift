@@ -19,11 +19,32 @@ final class UserTableViewCell: UITableViewCell {
     
     weak var delegate: UserTableViewCellDelegate?
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        setupViewForDefaultState()
+    }
+    
     override func prepareForReuse() {
         super.prepareForReuse()
+        setupViewForDefaultState()
+    }
+}
+
+// MARK: - StockFeedItemViewable
+extension UserTableViewCell {
+    private func setupViewForDefaultState() {
         imageTask?.cancel()
         imageTask = nil
+        
+        nameLabel.text = nil
+        reputationLabel.text = nil
+        followButton.setTitle(nil, for: .normal)
+        
         profileImageView.image = nil
+        profileImageView.layer.cornerRadius = profileImageView.frame.width / 2
+        profileImageView.clipsToBounds = true
+        profileImageView.layer.borderWidth = 4.0
+        profileImageView.layer.borderColor = UIColor.clear.cgColor
     }
 }
 
@@ -38,7 +59,13 @@ extension UserTableViewCell: UserTableViewCellUpdateable {
     }
     
     func updateFollowButton(isFollowing: Bool) {
-        followButton.setTitle(isFollowing ? "Unfollow" : "Follow", for: .normal)
+        if isFollowing {
+            profileImageView.layer.borderColor = UIColor.link.cgColor
+            followButton.setTitle("Unfollow", for: .normal)
+        } else {
+            profileImageView.layer.borderColor = UIColor.clear.cgColor
+            followButton.setTitle("Follow", for: .normal)
+        }
     }
 }
 
