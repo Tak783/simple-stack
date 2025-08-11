@@ -7,6 +7,7 @@
 
 import UIKit
 import CorePresentation
+import CoreStackExchange
 
 final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
@@ -21,23 +22,15 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let window = UIWindow(windowScene: windowScene)
         
+        UserDefaultsSEAPIKeyProvider.setStackExchangeAPIKey("rl_558dm4vJewGq8NJ5E4fi9Dyze")
+        
         let router = Router(navigationController: UINavigationController())
-        launchCoordinator = Self.appLaunchCoordinator()
+        launchCoordinator = LaunchCoordinator(router: router)
+        launchCoordinator.navigateToUserFeed()
         
         // Set root view controller
         window.rootViewController = router.navigationController
         self.window = window
         window.makeKeyAndVisible()
-    }
-}
-
-extension SceneDelegate {
-    private static func appLaunchCoordinator() -> LaunchCoordinator {
-        let router = Router(navigationController: .init())
-        let launchCoordinator = LaunchCoordinator(
-            router: router
-        )
-        launchCoordinator.navigateToUserFeed()
-        return launchCoordinator
     }
 }

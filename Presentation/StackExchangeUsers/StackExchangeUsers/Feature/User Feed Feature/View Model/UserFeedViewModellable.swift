@@ -8,16 +8,14 @@
 import CoreStackExchange
 import CoreFoundational
 
-protocol UserFeedViewModellable {
+protocol UserFeedViewModellable: UserFollowedStatusUpdatable {
     var title: String { get }
     var userModels: [UserModel] { get }
-
+    
     var onLoadingStateChange: Observer<Bool>? { get set }
     var onFeedLoadError: Observer<String?>? { get set }
     var onFeedLoadSuccess: Observer<Void>? { get set }
     var onFeedLoadEmptyState: Observer<Bool>? { get set }
-
-    func loadFeed()
     
-    func didRequestToUpdateFollowStatusFor(userWithId: Int)
+    func loadFeed()
 }

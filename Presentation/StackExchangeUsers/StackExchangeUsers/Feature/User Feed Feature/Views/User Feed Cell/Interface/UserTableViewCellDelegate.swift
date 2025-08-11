@@ -6,5 +6,5 @@
 //
 
 protocol UserTableViewCellDelegate: AnyObject {
-    func didTapToUpdateFollowStatusFor(userWithId userID: Int)
+    func didTapToUpdateFollowStatusFor(userWithId userID: Int, fromCell cell: UserTableViewCellUpdateable)
 }

@@ -18,11 +18,7 @@ final class UserFeedViewController: StoryboardedViewController {
         }
     }
     
-    var feedViewModel: UserFeedViewModellable? {
-        didSet {
-            bind()
-        }
-    }
+    var feedViewModel: UserFeedViewModellable?
  
     // MARK: - View Controller Lifecylce
     override func viewDidLoad() {
@@ -64,6 +60,7 @@ extension UserFeedViewController {
         bindLoadingState()
         bindLoadingErrorState()
         bindLoadingEmptyState()
+        bindLoadingSuccessState()
     }
     
     private func bindLoadingState() {
@@ -72,6 +69,16 @@ extension UserFeedViewController {
             DispatchQueue.main.async { [weak self] in
                 guard let self = self else { return }
                 self.setLoadingState(isLoading)
+            }
+        }
+    }
+    
+    private func bindLoadingSuccessState() {
+        feedViewModel?.onFeedLoadSuccess = { [weak self] isLoading in
+            guard let self = self else { return }
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else { return }
+                self.tableView.reloadData()
             }
         }
     }
@@ -127,6 +134,7 @@ extension UserFeedViewController {
         setupRefreshControl()
         tableView.dataSource = self
         tableView.delegate = self
+        bind()
     }
     
     private func registerCellsForTable() {
@@ -173,16 +181,14 @@ extension UserFeedViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let userModel = feedViewModel?.userModels[indexPath.row]  else {
-            assertionFailure("ViewModel should adhere to `UsersFeedItemTableViewControllable`")
             return .init()
         }
         guard let cell = tableView.dequeueReusableCell(withIdentifier: UserTableViewCell.className) as? UserTableViewCell else {
-            assertionFailure("Could not dequeue `StocksFeedTableViewCell` from TableView")
             return .init()
         }
         cell.delegate = self
         cell.update(withModel: userModel)
-        return .init()
+        return cell
     }
 }
 
@@ -191,7 +197,13 @@ extension UserFeedViewController: UITableViewDelegate {}
 
 // MARK: - UITableViewDelegate
 extension UserFeedViewController: UserTableViewCellDelegate {
-    func didTapToUpdateFollowStatusFor(userWithId userID: Int) {
-        feedViewModel?.didRequestToUpdateFollowStatusFor(userWithId: userID)
+    func didTapToUpdateFollowStatusFor(userWithId userID: Int, fromCell cell: UserTableViewCellUpdateable) {
+        guard let feedViewModel else {
+            return
+        }
+        feedViewModel.didRequestToUpdateFollowStatusFor(userWithId: userID)
+        
+        let isFollowing = feedViewModel.followedStatus(forUserWithId: userID)
+        cell.updateFollowButton(isFollowing: isFollowing)
     }
 }

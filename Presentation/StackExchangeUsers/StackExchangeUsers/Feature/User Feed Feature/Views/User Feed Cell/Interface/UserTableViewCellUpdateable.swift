@@ -9,4 +9,5 @@ import CoreStackExchange
 
 protocol UserTableViewCellUpdateable {
     func update(withModel model: any UserModellabe)
+    func updateFollowButton(isFollowing: Bool)
 }

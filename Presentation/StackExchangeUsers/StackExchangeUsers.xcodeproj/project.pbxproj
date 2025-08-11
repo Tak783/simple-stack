@@ -41,6 +41,30 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		8B08D9B22E4A434F00CD30E3 /* Exceptions for "StackExchangeUsersTests" folder in "StackExchangeUsers" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Resources/JSON/EmptyUsersFeed.json,
+				Resources/JSON/MalformedJSON.json,
+				Resources/JSON/MalformedUserFeed.json,
+				Resources/JSON/User.json,
+				Resources/JSON/UserFeed.json,
+				Resources/MockData.swift,
+			);
+			target = 8BA6C37B2E454904005B468A /* StackExchangeUsers */;
+		};
+		8B08D9B32E4A434F00CD30E3 /* Exceptions for "StackExchangeUsersTests" folder in "StackExchangeUsersTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Resources/JSON/EmptyUsersFeed.json,
+				Resources/JSON/MalformedJSON.json,
+				Resources/JSON/MalformedUserFeed.json,
+				Resources/JSON/User.json,
+				Resources/JSON/UserFeed.json,
+				Resources/MockData.swift,
+			);
+			target = 8BA6C3912E454907005B468A /* StackExchangeUsersTests */;
+		};
 		8BA6C3A42E454907005B468A /* Exceptions for "StackExchangeUsers" folder in "StackExchangeUsers" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -61,6 +85,10 @@
 		};
 		8BA6C3952E454907005B468A /* StackExchangeUsersTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				8B08D9B22E4A434F00CD30E3 /* Exceptions for "StackExchangeUsersTests" folder in "StackExchangeUsers" target */,
+				8B08D9B32E4A434F00CD30E3 /* Exceptions for "StackExchangeUsersTests" folder in "StackExchangeUsersTests" target */,
+			);
 			path = StackExchangeUsersTests;
 			sourceTree = "<group>";
 		};
@@ -329,7 +357,6 @@
 				INFOPLIST_FILE = StackExchangeUsers/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = UserFeed;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -357,7 +384,6 @@
 				INFOPLIST_FILE = StackExchangeUsers/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = UserFeed;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -500,7 +526,6 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = D9SX45YF8X;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIMainStoryboardFile = UserFeed;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = tak.seStack.StackExchangeUsersTests;
@@ -520,7 +545,6 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = D9SX45YF8X;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIMainStoryboardFile = UserFeed;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = tak.seStack.StackExchangeUsersTests;
